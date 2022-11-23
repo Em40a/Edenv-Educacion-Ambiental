@@ -1,17 +1,8 @@
-// Add nodes into the blog
-// const mainArticle = document.querySelector(".main__article");
-
-// for (let i = 0; i < 0; i++) {
-//   const mainBlog = document.querySelector(".content__slides");
-//   let child = mainArticle.cloneNode(true);
-//   mainBlog.appendChild(child);
-// }
-
 //======= FullPageJS=============
 
 new fullpage('#fullpage', {
 	autoScrolling: false,
-	fitToSection: false,
+	fitToSection: true,
 	scrollHorizontally: true,
 
 	navigation: true,
