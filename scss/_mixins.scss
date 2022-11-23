@@ -1,0 +1,21 @@
+@mixin display($display: null, $flow: null, $justify: null, $align: null, $gap: null) {
+    display: $display;
+
+    @if ($display == "flex") {
+        flex-flow: $flow;
+    }
+
+    @if ($display == "grid") {
+        grid-auto-flow: $flow;
+    }
+
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin mediaQuery($mobileFirst) {
+    @media screen and (min-width: $mobileFirst ) {
+        @content;
+    }
+}
