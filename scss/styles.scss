@@ -60,12 +60,41 @@ body {
 }
 
 .header {
-  @include mixins.display(flex, column, center, center);
+  @include mixins.display(flex, column, center);
   background: var(--textVisiblity),
               url(../img/background-landscape.jpg) no-repeat 
               center center / cover;
   background-attachment: fixed;  
+  position: relative;
+}
+
+
+.heroContent {
+  text-align: center;
+  padding: 48px 24px;
+
+  @include mixins.mediaQuery(768px) {
+    font-size: 2em;
   }
+
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+.iconContent {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 15%;
+  width: 54px;
+  animation: moveUpDown 1s ease infinite;
+  & a img {
+    transform: translate( -50%, -50% );
+  }
+
+
+}
 
 .logo {
   z-index: 999;
@@ -90,7 +119,7 @@ body {
 
   width: 100%;
   padding: 14px 24px;
-  --menu-clippy: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  --menu-clippy:  polygon(0 0, 100% 0, 100% 0, 0 0);
   --show: scale(1);
   --hide: scale(0);
 
@@ -165,27 +194,6 @@ body {
 }
 
 
-.heroContent {
-  text-align: center;
-  padding: 48px 24px;
-
-  @include mixins.mediaQuery(768px) {
-    font-size: 2em;
-  }
-
-  h1 {
-    font-size: 1.5em;
-  }
-}
-
-.iconContent {
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  bottom: 15%;
-  width: 54px;
-  animation: moveUpDown 1s ease infinite;
-}
 
 .blog{
   @include mixins.display( grid, row);
