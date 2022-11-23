@@ -62,14 +62,10 @@ body {
 .header {
   @include mixins.display(flex, column, center, center);
   background: var(--textVisiblity),
-    url(../img/rob-morton.jpg) no-repeat center center / cover;
-
-  // background: var(--textVisiblity),
-              // url(../img/matthew-smith.jpg) no-repeat 
-              // center center / cover;
-  
+              url(../img/background-landscape.jpg) no-repeat 
+              center center / cover;
   background-attachment: fixed;  
-            }
+  }
 
 .logo {
   font-size: 2rem;
@@ -194,7 +190,6 @@ body {
   @include mixins.display( grid, row);
   background-color: var(--grey);
   place-content: center;
-  min-height: 100vh;
 
 }
 
@@ -205,13 +200,13 @@ body {
   .card{
     width: 18rem;
     transition: .2s ease box-shadow;
-    perspective: 520px;
+    perspective: 500px;
     
     &__img {
       transition: .4s ease transform;
       cursor: pointer;
       &:hover{
-        transform: translateZ( 40px );
+        transform: translateZ( 25px );
       }
       
     }
@@ -226,12 +221,8 @@ body {
         box-shadow: 2px 2px 12px rgba(73, 73, 73, 0.25);
       }
     }
-
-
-
   }
 }
-
 
 .contacto{
   background-color: var(--principal);
