@@ -62,7 +62,7 @@ body {
 .header {
   @include mixins.display(flex, column, center);
   background: var(--textVisiblity),
-              url(../img/background-landscape.jpg) no-repeat 
+              url(../img/background-landscape.webp) no-repeat 
               center center / cover;
   background-attachment: fixed;  
   position: relative;
